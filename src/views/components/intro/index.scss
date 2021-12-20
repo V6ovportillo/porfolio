@@ -1,0 +1,107 @@
+.intro {
+    background-color: white;
+    display: flex;
+
+    .left {
+        flex: 0.5;
+        overflow: hidden;
+
+        .imgContainer {
+            width: 1000px;
+            height: 1000px;
+            background-color: crimson;
+            border-radius: 50%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            float: right;
+
+            img {
+                height: 90%;
+            }
+        }
+    }
+    .right {
+        flex: 0.5;
+        position: relative;
+
+        .wrapper {
+            width: 100%;
+            height: 100%;
+            padding-left: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            h1 {
+                font-size: 60px;
+                margin: 10px 0;
+            }
+            h2 {
+                font-size: 40px;
+            }
+            h3 {
+                font-size: 30px;
+            }
+            span {
+                font-size: inherit;
+                color: crimson;
+                animation: colorChange 10s infinite;
+                animation-timing-function: ease;
+
+                @keyframes colorChange {
+                    50% {
+                        color: crimson;
+                    } 
+                    60% {
+                        color: rgb(23, 158, 192);
+                    } 
+                    70% {
+                        color: rgb(122, 206, 13);
+                    }
+                    80% {
+                        color: orange;
+                    }
+                    90% {
+                        color: crimson;
+                    } 
+                }
+            }
+            .ityped-cursor {
+                animation: blink 1s infinite;
+
+                @keyframes blink {
+                    50%{
+                        opacity: 1;
+                    }
+                    100%{
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+
+        a {
+            //Importante: cuando se utiliza una posicion absoluta
+            //Es necesario que el container que lo contiene sea realtivo
+            position: absolute;
+            bottom: 50px;
+            left: 40%;
+            animation: arrowBlink 2s infinite;
+
+            img {
+                width: 30px;
+            }
+
+            @keyframes arrowBlink {
+                from {
+                    bottom: 50px;
+                    opacity: 0;
+                }
+                to {
+                    bottom: 10px;
+                }
+            }
+        }
+    }
+}

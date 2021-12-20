@@ -1,0 +1,25 @@
+.app {
+    height: 100vh;
+
+    // TODO: Seek how to get height of topbar.
+    // Also seek clean architecture of scss for react.
+    .sections {
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: lightsalmon;
+        position: relative;
+        top: 70px;
+        scroll-behavior: smooth;
+        scroll-snap-type: y mandatory;
+        scrollbar-width: none; //For Firefox
+        &::-webkit-scrollbar{
+            display: none;//For the rest of navegators
+        }
+
+        > *{
+            width: 100vw;
+            height: calc(100vh - 70px);
+            scroll-snap-align: start;
+        }
+    }
+}
