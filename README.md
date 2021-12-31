@@ -1,4 +1,19 @@
-# Getting Started with Create React App
+### React
+I am building this proyect with React, following the next tutorial:
+https://www.youtube.com/watch?v=7WwtzsSHdpI
+
+I made some changes because I am looking for a clean architecture as efficiently as possible.
+
+### Next steps 
+
+## Add Redux
+I already saw videos about Redux. I only have to put into practice
+## Add Node js and DB access
+I saw an example that utilized Axios to get the data from a RESTApi. I need to know if it is necessary to use Node or if I can resolve only with Axios
+## Write again using TDD
+I already read the idea, but I want to finish the tutorial to understand React first.
+
+<!-- # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -67,4 +82,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->
