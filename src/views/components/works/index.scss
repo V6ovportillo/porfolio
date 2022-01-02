@@ -3,14 +3,29 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 
+    .arrow{
+        position: absolute;
+        height: 50px;
+        cursor: pointer;
+
+        &.left{
+            left: 100px;
+            transform: rotate(180deg);
+        }
+        &.right{
+            right: 100px;
+        }
+    }
     .slider {
         height: 350px;
         display: flex;
         position: absolute;
-        left: 0;
-
+        transition: all 1s ease-out;
+        left: 0vw;
         .container {
+            width: 100vw;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -50,6 +65,18 @@
                                 width: 25px;
                             }
                         }
+                        h2 {
+                            font-style: 20px;
+                        }
+                        p {
+                            font-style: 13px;
+                        }
+                        span {
+                            font-style: 12px;
+                            font-weight: 600;
+                            text-decoration: underline;
+                            cursor: pointer;
+                        }
                     }
                 }
                 .right {
@@ -58,6 +85,12 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                    overflow: hidden;
+
+                    img {
+                        width: 400px;
+                        transform: rotate(-10deg);
+                    }
                 }
             }
         }

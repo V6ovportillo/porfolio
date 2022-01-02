@@ -1,26 +1,67 @@
 import './index.scss';
+import { useState } from 'react';
 
 const Works = () => {
+    const data = [
+        {
+            id: "1",
+            icon: "./assets/mobile.png",
+            title: "Web Design",
+            desc:
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+            img:
+                "https://99designs-blog.imgix.net/blog/wp-content/uploads/2018/10/attachment_100040756-e1538485934255.jpeg?auto=format&q=60&fit=max&w=930",
+        },
+        {
+            id: "2",
+            icon: "./assets/globe.png",
+            title: "Mobile Application",
+            desc:
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+            img:
+                "https://i.pinimg.com/originals/e9/c9/2f/e9c92f7869d682a6fa5a97fb8a298f30.jpg",
+        },
+        {
+            id: "3",
+            icon: "./assets/writing.png",
+            title: "Branding",
+            desc:
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+            img:
+                "https://i.pinimg.com/originals/a9/f6/94/a9f69465d972a004ad581f245d6ad581.jpg",
+        },
+    ];
+
+    const [currentSlide, setCurrentSlide] = useState(0);
+
     return (
         <div className='works' id='works'>
-            <div className="slider">
-                <div className="container">
-                    <div className="item">
-                        <div className="left">
-                            <div className="leftContainer">
-                                <div className="imgContainer">
-                                    <img src="assets/mobile.png" alt="" />
+            <div className="slider"
+                style={{ transform: `translateX(-${((currentSlide > 0 ? currentSlide : currentSlide * (-1)) % (data.length)) * 100}vw)` }}>
+                {data.map((d) => (
+                    <div className="container" key={d.id}>
+                        <div className="item" >
+                            <div className="left">
+                                <div className="leftContainer">
+                                    <div className="imgContainer">
+                                        <img src={d.icon} alt="" />
 
+                                    </div>
+                                    <h2>{d.title}</h2>
+                                    <p>{d.desc}</p>
+                                    <span>Proyects</span>
                                 </div>
-                                <h2>Title</h2>
-                                <p>Descripcion</p>
-                                <button></button>
+                            </div>
+                            <div className="right">
+                                <img src={d.img} alt="" />
                             </div>
                         </div>
-                        <div className="right"></div>
                     </div>
-                </div>
+                ))}
             </div>
+            <img src="assets/arrow.png" alt="" className='arrow left' onClick={()=>setCurrentSlide(currentSlide - 1)} />
+            <img src="assets/arrow.png" alt="" className='arrow right' onClick={()=>setCurrentSlide(currentSlide + 1)} />
+            
         </div>
     )
 };
