@@ -1,5 +1,6 @@
 import Topbar from "./components/topbar";
 import Intro from "./components/intro";
+import Reserve from "./components/reserve";
 import Portfolio from "./components/portfolio";
 import Works from "./components/works";
 import Testimonials from "./components/testimonials";
@@ -17,6 +18,7 @@ const App = () => {
             <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
             <div className="sections">
                 <Intro />
+                <Reserve />
                 <Portfolio />
                 <Works />
                 <Testimonials />
