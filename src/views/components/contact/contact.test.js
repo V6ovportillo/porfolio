@@ -13,6 +13,13 @@ describe('Contact', ()=>{
     it('render title Contact', ()=> {
         expect(wrapper.find('h2').text()).toContain("Contact");
     })
+    
+    it('render form', () => {        
+        
+        expect(wrapper.find("#buttonSend").text()).toBe("Send")
+        expect(wrapper.find("#email")).toHaveLength(1)
+        expect(wrapper.find("#message")).toHaveLength(1)
+    })
 })
 
 
@@ -29,12 +36,7 @@ beforeEach(()=>{
 })
 describe('Contact', () => {
     it('must render contact page', () => {
-        expect(wrapper.find("#contact").text()).toBeInTheDocument()
+        expect(wrapper.find("#contact").text()).toBe()
     })
 
-    it('render form', () => {        
-        expect(wrapper.find("#email").text()).toBeInTheDocument()
-        expect(wrapper.find("#message").text()).toBeInTheDocument()
-        expect(wrapper.find("#buttonSend").text()).toBeInTheDocument()
-    })
 })*/
